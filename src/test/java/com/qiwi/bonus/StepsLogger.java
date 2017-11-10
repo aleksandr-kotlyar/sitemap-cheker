@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class StepsLogger {
 
     @Step
-    public void assertion(String assertion, Runnable r) {
+    protected void assertion(String assertion, Runnable r) {
         try {
             r.run();
             info("Assertion PASSED: " + assertion);
@@ -21,7 +21,7 @@ public class StepsLogger {
     }
 
     @Step
-    public void act(String act, Runnable r) {
+    protected void act(String act, Runnable r) {
         try {
             r.run();
             info("Act PASSED: " + act);
@@ -33,7 +33,7 @@ public class StepsLogger {
 
 
     @Step
-    public void arrange(String arrange, Runnable r) {
+    protected void arrange(String arrange, Runnable r) {
         try {
             r.run();
             info("Arrange PASSED: " + arrange);
@@ -45,7 +45,7 @@ public class StepsLogger {
 
     private static final Logger LOGGER = Logger.getLogger(StepsLogger.class.getName());
 
-    public void info(String logMessage) {
+    private void info(String logMessage) {
         getLoggerInstance().info(logMessage);
     }
 
