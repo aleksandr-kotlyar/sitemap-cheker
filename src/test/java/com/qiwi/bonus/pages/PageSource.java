@@ -9,7 +9,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 /**
- * Created by power on 10.11.2017. 2:18
+ * Created by alexander.kotlyar on 10.11.2017. 2:18
  */
 public class PageSource {
     public List<String> getLinksFromPageSourceStartingWith(String pageSource, String schema) {

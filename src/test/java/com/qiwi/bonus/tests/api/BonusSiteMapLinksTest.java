@@ -3,17 +3,11 @@ package com.qiwi.bonus.tests.api;
 import com.qiwi.bonus.StepsLogger;
 import com.qiwi.bonus.pages.PageSource;
 import io.qameta.allure.Issue;
-import io.qameta.allure.restassured.AllureRestAssured;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.assertj.core.api.JUnitSoftAssertions;
-import org.jsoup.Jsoup;
-import org.jsoup.select.Elements;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -27,13 +21,10 @@ public class BonusSiteMapLinksTest extends StepsLogger {
     private static String BONUS_SITEMAP_PAGE_SOURCE;
     private List<String> allBonusSiteMapLinks;
     private PageSource pageSource = new PageSource();
-
-    @Rule
-    public final JUnitSoftAssertions softly = new JUnitSoftAssertions();
+    private SoftAssertions softAssertions = new SoftAssertions();
 
     @Before
     public void checkBonusSiteMapIsAvailable() throws Exception {
-        RestAssured.filters(new AllureRestAssured());
         given()
                 .when()
                 .get(HTTPS_BONUS_QIWI_COM_SITEMAP)
@@ -56,25 +47,17 @@ public class BonusSiteMapLinksTest extends StepsLogger {
         act("Collect all links from sitemap", () ->
                 allBonusSiteMapLinks = pageSource.getLinksFromPageSourceStartingWith(BONUS_SITEMAP_PAGE_SOURCE, BONUS_LINK_SCHEMA));
 
-        assertion("Check each link availability (200 response status code)", () ->
-                //allBonusSiteMapLinks.forEach(this::assertStatusCode)); //12 minutes
-                allBonusSiteMapLinks.parallelStream().forEach(this::assertStatusCode)); //1 minute
+        assertion("Check each link availability (200 response status code)", () -> {
+            allBonusSiteMapLinks.parallelStream().forEach(this::assertStatusCode);
+            softAssertions.assertAll();
+        });
     }
-
-    /*
-
-        These links had status 500 between 23:22:22 and 23:23:15 on Nov.9.2017:
-
-            [link: 'https://bonus.qiwi.com/offers/sovest']
-            [link: 'https://bonus.qiwi.com/offers/ssylka-dlya-mfo-na-qiwi-com']
-
-        */
 
     private void assertStatusCode(String link) {
         Response response = given()
                 .when()
                 .head(link);
 
-        softly.assertThat(response.statusCode()).as("link: '" + link + "'").isEqualTo(200);
+        softAssertions.assertThat(response.statusCode()).as("link: '" + link + "'").isEqualTo(200);
     }
 }
