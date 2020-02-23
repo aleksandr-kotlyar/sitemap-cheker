@@ -2,7 +2,10 @@ image: registry.gitlab.com/aleksandr-kotlyar/java-sitemap-checker
 stages:
   - test
 
+variables:
+  SITEMAPURL: https://www.ivi.ru/sitemap-series-adventures.xml #default sitemapUrl
+
 test:
   stage: test
   script:
-    - mvn clean test
+    - mvn clean test -DsitemapUrl=${SITEMAPURL}
