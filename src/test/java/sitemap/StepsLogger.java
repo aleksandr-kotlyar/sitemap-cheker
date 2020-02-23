@@ -1,11 +1,11 @@
-package com.qiwi.bonus;
+package sitemap;
 
 import io.qameta.allure.Step;
 
 import java.util.logging.Logger;
 
 /**
- * Created by power on 09.11.2017. 22:45
+ * Created by Aleksandr Kotlyar on 09.11.2017. 22:45
  */
 public class StepsLogger {
 
@@ -45,7 +45,7 @@ public class StepsLogger {
 
     private static final Logger LOGGER = Logger.getLogger(StepsLogger.class.getName());
 
-    private void info(String logMessage) {
+    public void info(String logMessage) {
         getLoggerInstance().info(logMessage);
     }
 
