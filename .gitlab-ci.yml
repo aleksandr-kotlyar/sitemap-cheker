@@ -1,14 +1,6 @@
-image: maven:latest
+image: registry.gitlab.com/aleksandr-kotlyar/java-sitemap-checker
 stages:
-  - build
   - test
-
-build:
-  stage: build
-  script:
-    - mvn compile
-    - pwd
-    - ls
 
 test:
   stage: test
