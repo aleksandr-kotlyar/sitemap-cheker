@@ -1,7 +1,5 @@
 package sitemap;
 
-import io.qameta.allure.Step;
-
 import java.util.logging.Logger;
 
 /**
@@ -9,7 +7,6 @@ import java.util.logging.Logger;
  */
 public class StepsLogger {
 
-    @Step
     protected void assertion(String assertion, Runnable r) {
         try {
             r.run();
@@ -20,7 +17,6 @@ public class StepsLogger {
         }
     }
 
-    @Step
     protected void act(String act, Runnable r) {
         try {
             r.run();
@@ -32,7 +28,6 @@ public class StepsLogger {
     }
 
 
-    @Step
     protected void arrange(String arrange, Runnable r) {
         try {
             r.run();
