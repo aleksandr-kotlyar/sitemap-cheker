@@ -7,6 +7,8 @@ build:
   stage: build
   script:
     - mvn compile
+    - pwd
+    - ls
 
 test:
   stage: test
