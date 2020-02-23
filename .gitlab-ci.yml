@@ -1,0 +1,8 @@
+image: registry.gitlab.com/aleksandr-kotlyar/java-sitemap-checker
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - mvn clean test
