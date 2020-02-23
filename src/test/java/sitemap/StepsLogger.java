@@ -1,4 +1,4 @@
-package com.qiwi.bonus;
+package sitemap;
 
 import io.qameta.allure.Step;
 
