@@ -1,7 +1,6 @@
 package sitemap.tests;
 
 import sitemap.StepsLogger;
-import io.qameta.allure.Issue;
 import io.restassured.response.Response;
 import org.assertj.core.api.SoftAssertions;
 import org.jsoup.Jsoup;
@@ -23,7 +22,7 @@ public class SitemapTest extends StepsLogger {
     private SoftAssertions softAssertions = new SoftAssertions();
 
     @Before
-    public void checkBonusSiteMapIsAvailable() throws Exception {
+    public void checkSitemapIsAvailable() throws Exception {
         given().header("user-agent", "yandex").when().get(SITEMAP_URL).then().statusCode(200);
     }
 
@@ -33,7 +32,6 @@ public class SitemapTest extends StepsLogger {
      * 3.Check each link availability (200 response status code)
      */
     @Test
-    @Issue("1")
     public void testAvailabilityOfAllSitemapLinks() throws Exception {
         System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "150");
         arrange("Get sitemap source", () ->
