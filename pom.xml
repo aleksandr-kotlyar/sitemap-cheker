@@ -6,7 +6,7 @@
 
     <groupId>java-sitemap-checker</groupId>
     <artifactId>java-sitemap-checker</artifactId>
-    <version>1.3-SNAPSHOT</version>
+    <version>1.5-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sitemapUrl>https://www.ivi.ru/sitemap-series-adventures.xml</sitemapUrl>
