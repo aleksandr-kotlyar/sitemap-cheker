@@ -6,6 +6,7 @@ import org.jsoup.Jsoup;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import sitemap.StepsLogger;
 
 import java.io.IOException;
@@ -35,6 +36,7 @@ public class SitemapTest extends StepsLogger {
      * 2.Collect all links from sitemap
      * 3.Check each link availability (200 response status code)
      */
+    @Category(Xml.class)
     @Test
     public void testAvailabilityOfAllSitemapLinks() throws Exception {
         System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "150");
@@ -58,6 +60,12 @@ public class SitemapTest extends StepsLogger {
     }
 
     private String getSitemapUrl() {
+        String url = getProperty("sitemapUrl");
+        Assert.assertNotEquals("Target url is empty! Set sitemapUrl in pom.xml or ${SITEMAPURL} in Gitlab-CI", "", url);
+        return url;
+    }
+
+    private String getProperty(String propertyName) {
         Properties properties = new Properties();
         try {
             properties.load(SitemapTest.class.getClassLoader().getResourceAsStream("Sitemap.properties"));
@@ -65,8 +73,6 @@ public class SitemapTest extends StepsLogger {
             e.printStackTrace();
             Assert.fail();
         }
-        String url = properties.getProperty("sitemapUrl");
-        Assert.assertNotEquals("Target url is empty! Set sitemapUrl in pom.xml or ${SITEMAPURL} in Gitlab-CI", "", url);
-        return url;
+        return properties.getProperty(propertyName);
     }
 }
