@@ -4,14 +4,14 @@ stages:
 
 variables:
   SITEMAPURL: https://www.ivi.ru/sitemap-series-adventures.xml #default sitemapUrl
-  SOURCETYPE:
+  SOURCETYPE: ''
 
 .test:
   stage: test
   script:
     - mvn clean test -DsitemapUrl=${SITEMAPURL} -Dgroups=${SOURCETYPE}
 
-xml: test
+xml:
   extends: .test
   variables:
     SOURCETYPE: source.type.Xml
