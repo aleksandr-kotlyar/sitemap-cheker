@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import sitemap.StepsLogger;
+import source.type.Xml;
 
 import java.io.IOException;
 import java.util.ArrayList;
