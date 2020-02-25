@@ -9,3 +9,8 @@ test:
   stage: test
   script:
     - mvn clean test -DsitemapUrl=${SITEMAPURL}
+
+xml:
+  stage: test
+  script:
+    - mvn clean test -DsitemapUrl=${SITEMAPURL} -Dgroups=sitemap.tests.Xml
