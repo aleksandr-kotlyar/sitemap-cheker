@@ -9,7 +9,8 @@
     <version>1.5-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sitemapUrl>https://www.ivi.ru/sitemap-series-adventures.xml</sitemapUrl>
+        <sitemapUrl></sitemapUrl>
+        <domain></domain>
     </properties>
 
     <build>
