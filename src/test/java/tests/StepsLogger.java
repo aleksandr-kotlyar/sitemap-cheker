@@ -1,4 +1,4 @@
-package sitemap;
+package tests;
 
 import java.util.logging.Logger;
 
