@@ -6,11 +6,12 @@ variables:
   SITEMAPURL: ''
   SOURCETYPE: ''
   DOMAIN: ''
+  STREAMS: 10
 
 .test:
   stage: test
   script:
-    - mvn clean test -Dgroups=${SOURCETYPE} -DsitemapUrl=${SITEMAPURL} -Ddomain=${DOMAIN}
+    - mvn clean test -Dgroups=${SOURCETYPE} -DsitemapUrl=${SITEMAPURL} -Ddomain=${DOMAIN} -Dstreams=${STREAMS}
   only:
     - web
 
