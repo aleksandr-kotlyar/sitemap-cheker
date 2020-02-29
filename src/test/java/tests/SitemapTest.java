@@ -82,7 +82,8 @@ public class SitemapTest extends StepsLogger {
 
 
     private void assertStatusCode(String link) {
-        Response response = given().header("user-agent", "yandex").get(link);
+        Response response = given().header("user-agent", "yandex").redirects().follow(false)
+                .when().head(link);
         softAssertions.assertThat(response.statusCode()).as("link: '" + link + "'").isEqualTo(200);
     }
 

@@ -6,6 +6,8 @@ variables:
   SITEMAPURL: ''
   SOURCETYPE: ''
   DOMAIN: ''
+  STREAMS: 10
+  SUITE: ''
 
 .test:
   stage: test
@@ -18,8 +20,15 @@ xml:
   extends: .test
   variables:
     SOURCETYPE: source.type.Xml
+  only:
+    variables:
+      - $SUITE == $CI_JOB_NAME
+
 
 html:
   extends: .test
   variables:
     SOURCETYPE: source.type.Html
+  only:
+    variables:
+      - $SUITE == $CI_JOB_NAME
