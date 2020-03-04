@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import source.type.Html;
 import source.type.Xml;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class SitemapTest extends StepsLogger {
     @Category(Xml.class)
     @Test
     public void testAvailabilityOfAllSitemapLinks() {
-        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "20");
+        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", getStreamsCount());
         arrange("Get sitemap source", () ->
                 SITEMAP_PAGE_SOURCE = given().header("user-agent", "yandex").get(SITEMAP_URL).getBody().asString());
 
@@ -65,7 +66,7 @@ public class SitemapTest extends StepsLogger {
     @Category(Html.class)
     @Test
     public void testAvailabilityOfAllHtmlPageLinks() {
-        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "10");
+        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", getStreamsCount());
 
         arrange("Get page source", () ->
                 SITEMAP_PAGE_SOURCE = given().get(SITEMAP_URL).getBody().asString());
@@ -111,6 +112,12 @@ public class SitemapTest extends StepsLogger {
     private String getSitemapUrl() {
         String url = getProperty("sitemapUrl");
         Assert.assertNotEquals("Target sitemapUrl is empty! Set sitemapUrl in pom.xml or ${SITEMAPURL} in Gitlab-CI", "", url);
+        return url;
+    }
+
+    private String getStreamsCount() {
+        String url = getProperty("streams");
+        Assert.assertNotEquals("Target streamsCount is empty! Set streams in pom.xml or ${STREAMS} in Gitlab-CI", "", url);
         return url;
     }
 

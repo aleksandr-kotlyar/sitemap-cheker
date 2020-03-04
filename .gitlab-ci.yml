@@ -12,7 +12,7 @@ variables:
 .test:
   stage: test
   script:
-    - mvn clean test -Dgroups=${SOURCETYPE} -DsitemapUrl=${SITEMAPURL} -Ddomain=${DOMAIN}
+    - mvn clean test -Dgroups=${SOURCETYPE} -DsitemapUrl=${SITEMAPURL} -Ddomain=${DOMAIN} -Dstreams=${STREAMS}
   only:
     - web
 
