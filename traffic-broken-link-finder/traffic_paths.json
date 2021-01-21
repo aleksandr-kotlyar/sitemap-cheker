@@ -2,7 +2,7 @@
   {
     "path": "/aleksandr-kotlyar/broken-link-finder",
     "title": "GitHub - aleksandr-kotlyar/broken-link-finder: Simple sitemap link checker. A...",
-    "count": 16,
+    "count": 6,
     "uniques": 3
   },
   {
@@ -10,12 +10,6 @@
     "title": "Issues · aleksandr-kotlyar/broken-link-finder · GitHub",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/aleksandr-kotlyar/broken-link-finder/branches",
-    "title": "Branches · aleksandr-kotlyar/broken-link-finder",
-    "count": 2,
-    "uniques": 1
   },
   {
     "path": "/aleksandr-kotlyar/broken-link-finder/releases/tag/v1.5",
@@ -36,12 +30,6 @@
     "uniques": 1
   },
   {
-    "path": "/aleksandr-kotlyar/broken-link-finder/pulls",
-    "title": "Pull requests · aleksandr-kotlyar/broken-link-finder",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/aleksandr-kotlyar/broken-link-finder/tree/master/src/test",
     "title": "broken-link-finder/src/test at master · aleksandr-kotlyar/broken-link-finder",
     "count": 1,
@@ -56,6 +44,18 @@
   {
     "path": "/aleksandr-kotlyar/broken-link-finder/tree/v1.5",
     "title": "GitHub - aleksandr-kotlyar/broken-link-finder at v1.5",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/aleksandr-kotlyar/broken-link-finder/tree/v1.5/src/test",
+    "title": "broken-link-finder/src/test at v1.5 · aleksandr-kotlyar/broken-link-finder · ...",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/aleksandr-kotlyar/broken-link-finder/tree/v1.5/src/test/java/sitemap",
+    "title": "broken-link-finder/src/test/java/sitemap at v1.5 · aleksandr-kotlyar/broken-l...",
     "count": 1,
     "uniques": 1
   }
