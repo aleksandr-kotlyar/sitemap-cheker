@@ -2,7 +2,19 @@
   {
     "path": "/aleksandr-kotlyar/broken-link-finder",
     "title": "GitHub - aleksandr-kotlyar/broken-link-finder: Simple sitemap link checker. A...",
-    "count": 3,
+    "count": 5,
     "uniques": 2
+  },
+  {
+    "path": "/aleksandr-kotlyar/broken-link-finder/actions/workflows/traffic2badge.yml",
+    "title": "Actions · aleksandr-kotlyar/broken-link-finder",
+    "count": 3,
+    "uniques": 1
+  },
+  {
+    "path": "/aleksandr-kotlyar/broken-link-finder/actions",
+    "title": "Actions · aleksandr-kotlyar/broken-link-finder",
+    "count": 2,
+    "uniques": 1
   }
 ]
