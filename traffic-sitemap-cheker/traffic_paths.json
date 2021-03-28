@@ -2,7 +2,7 @@
   {
     "path": "/aleksandr-kotlyar/broken-link-finder",
     "title": "aleksandr-kotlyar/broken-link-finder: Simple sitemap link checker. Aslo mirro...",
-    "count": 6,
+    "count": 5,
     "uniques": 1
   },
   {
@@ -14,12 +14,6 @@
   {
     "path": "/aleksandr-kotlyar/broken-link-finder/graphs/contributors",
     "title": "Contributors to aleksandr-kotlyar/broken-link-finder",
-    "count": 2,
-    "uniques": 1
-  },
-  {
-    "path": "/aleksandr-kotlyar/broken-link-finder/issues",
-    "title": "Issues · aleksandr-kotlyar/broken-link-finder",
     "count": 2,
     "uniques": 1
   },
@@ -36,8 +30,8 @@
     "uniques": 1
   },
   {
-    "path": "/aleksandr-kotlyar/broken-link-finder/issues/24",
-    "title": "Empty test builds are fail · Issue #24 · aleksandr-kotlyar/broken-link-finder",
+    "path": "/aleksandr-kotlyar/broken-link-finder/issues",
+    "title": "Issues · aleksandr-kotlyar/broken-link-finder",
     "count": 1,
     "uniques": 1
   },
