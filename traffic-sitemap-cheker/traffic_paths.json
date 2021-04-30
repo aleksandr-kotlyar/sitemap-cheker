@@ -2,24 +2,36 @@
   {
     "path": "/aleksandr-kotlyar/sitemap-cheker",
     "title": "aleksandr-kotlyar/sitemap-cheker: Simple sitemap link checker. Aslo mirrored ...",
-    "count": 5,
-    "uniques": 1
+    "count": 7,
+    "uniques": 2
   },
   {
     "path": "/aleksandr-kotlyar/sitemap-cheker/tree/master/src/test",
     "title": "sitemap-cheker/src/test at master · aleksandr-kotlyar/sitemap-cheker",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/aleksandr-kotlyar/sitemap-cheker/tree/master/src/test/java/tests",
+    "title": "sitemap-cheker/src/test/java/tests at master · aleksandr-kotlyar/sitemap-cheker",
+    "count": 4,
+    "uniques": 1
+  },
+  {
+    "path": "/aleksandr-kotlyar/sitemap-cheker/blob/master/src/test/java/tests/SitemapTest.java",
+    "title": "sitemap-cheker/SitemapTest.java at master · aleksandr-kotlyar/sitemap-cheker",
     "count": 3,
     "uniques": 1
   },
   {
     "path": "/aleksandr-kotlyar/sitemap-cheker/tree/master/src/test/java",
     "title": "sitemap-cheker/src/test/java at master · aleksandr-kotlyar/sitemap-cheker",
-    "count": 2,
+    "count": 3,
     "uniques": 1
   },
   {
-    "path": "/aleksandr-kotlyar/sitemap-cheker/tree/master/src/test/java/tests",
-    "title": "sitemap-cheker/src/test/java/tests at master · aleksandr-kotlyar/sitemap-cheker",
+    "path": "/aleksandr-kotlyar/sitemap-cheker/blob/master/src/test/java/tests/StepsLogger.java",
+    "title": "sitemap-cheker/StepsLogger.java at master · aleksandr-kotlyar/sitemap-cheker",
     "count": 2,
     "uniques": 1
   },
@@ -42,20 +54,8 @@
     "uniques": 1
   },
   {
-    "path": "/aleksandr-kotlyar/sitemap-cheker/blob/master/src/test/java/tests/SitemapTest.java",
-    "title": "sitemap-cheker/SitemapTest.java at master · aleksandr-kotlyar/sitemap-cheker",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/aleksandr-kotlyar/sitemap-cheker/blob/master/src/test/java/tests/StepsLogger.java",
-    "title": "sitemap-cheker/StepsLogger.java at master · aleksandr-kotlyar/sitemap-cheker",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/aleksandr-kotlyar/sitemap-cheker/tree/master/src",
-    "title": "sitemap-cheker/src at master · aleksandr-kotlyar/sitemap-cheker",
+    "path": "/aleksandr-kotlyar/sitemap-cheker/blob/master/src/test/resources/Sitemap.properties",
+    "title": "sitemap-cheker/Sitemap.properties at master · aleksandr-kotlyar/sitemap-cheker",
     "count": 1,
     "uniques": 1
   }
